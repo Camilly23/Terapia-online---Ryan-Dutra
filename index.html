@@ -2,21 +2,42 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Terapia online - Ryan Dutra</title>
     <link rel="icon" type="image/png" href="Logo_S.PsicoHighQ_SF.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com/3.4.16"></script>
-    <script>tailwind.config = { theme: { extend: { colors: { primary: '#5B86E5', secondary: '#9D8DE3' }, borderRadius: { 'none': '0px', 'sm': '4px', DEFAULT: '8px', 'md': '12px', 'lg': '16px', 'xl': '20px', '2xl': '24px', '3xl': '32px', 'full': '9999px', 'button': '8px' } } } }</script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#5B86E5',
+                        secondary: '#9D8DE3'
+                    },
+                    borderRadius: {
+                        'none': '0px',
+                        'sm': '4px',
+                        DEFAULT: '8px',
+                        'md': '12px',
+                        'lg': '16px',
+                        'xl': '20px',
+                        '2xl': '24px',
+                        '3xl': '32px',
+                        'full': '9999px',
+                        'button': '8px'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
     <style>
-           :where([class^="ri-"])::before {
+        :where([class^="ri-"])::before {
             content: "\f3c2";
         }
 
@@ -29,137 +50,63 @@
             background-color: #f8fafc;
         }
 
-        .animate-fade-in {
-            animation: fadeIn 1s ease-in-out;
-        }
-
-        .animate-slide-in {
-            animation: slideIn 1s ease-out;
-        }
-
-        .animate-scale-up {
-            animation: scaleUp 0.5s ease-out;
-        }
-
-        .animate-pulse {
-            animation: pulse 2s infinite;
-        }
-
-        .animate-rotate {
-            animation: rotate 15s linear infinite;
-        }
-
-        .animate-bounce-subtle {
-            animation: bounceSlight 2s infinite;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-
-            to {
-                opacity: 1;
-            }
-        }
-
-        @keyframes slideIn {
-            from {
-                transform: translateX(-50px);
-                opacity: 0;
-            }
-
-            to {
-                transform: translateX(0);
-                opacity: 1;
-            }
-        }
-
-        @keyframes scaleUp {
-            from {
-                transform: scale(0.8);
-                opacity: 0;
-            }
-
-            to {
-                transform: scale(1);
-                opacity: 1;
-            }
-        }
-
-        @keyframes pulse {
-            0% {
-                transform: scale(1);
-            }
-
-            50% {
-                transform: scale(1.05);
-            }
-
-            100% {
-                transform: scale(1);
-            }
-        }
-
-        @keyframes rotate {
-            from {
-                transform: rotate(0deg);
-            }
-
-            to {
-                transform: rotate(360deg);
-            }
-        }
-
-        @keyframes bounceSlight {
-
-            0%,
-            100% {
-                transform: translateY(0);
-            }
-
-            50% {
-                transform: translateY(-10px);
-            }
-        }
-
-        .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px -5px rgba(91, 134, 229, 0.2);
-        }
-
-        .book-card {
-            perspective: 1000px;
-        }
-
-        .book-inner {
-            transition: transform 0.8s;
-            transform-style: preserve-3d;
-        }
-
-        .book-card:hover .book-inner {
-            transform: rotateY(15deg);
-        }
-        .logo1{
+        .logo1 {
             width: 60px;
             height: 60px;
         }
-        .logo2{
-            width: 150px;
-            height: 100px;
-        }
 
-            @media (max-width: 768px) {
-    /* Estilos para telas menores, como celular */
-    .meu-container {
-        flex-direction: column;
-        padding: 1rem;
-    }
-    }
-   
+        @media (max-width: 768px) {
+            .meu-container {
+                flex-direction: column;
+                padding: 1rem;
+            }
+        }
     </style>
-    
 </head>
+
+<body class="bg-white">
+    <!-- Navegação -->
+    <header class="fixed w-full bg-white/95 backdrop-blur-sm shadow-sm z-50 animate-fade-in">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center relative">
+            <a href="#" class="text-3xl font-['Pacifico'] text-primary">Psicologia com Ryan CRP-SP 06/218431</a>
+            <img src="Logo_S.PsicoHighQ_SF.png" class="logo1" />
+            <nav class="hidden md:flex space-x-8">
+                <a href="#sobre" class="text-gray-700 hover:text-primary transition-colors">Sobre Mim</a>
+                <a href="#abordagem" class="text-gray-700 hover:text-primary transition-colors">Abordagem</a>
+                <a href="#trabalhos" class="text-gray-700 hover:text-primary transition-colors">Publicações</a>
+                <a href="#servicos" class="text-gray-700 hover:text-primary transition-colors">Serviços</a>
+                <a href="#especialidades" class="text-gray-700 hover:text-primary transition-colors">Especialidades</a>
+            </nav>
+            <a href="https://wa.me/qr/6EPFGZWIRKVCE1" target="_blank"
+                class="bg-primary text-white px-6 py-2 !rounded-button shadow-md hover:bg-primary/90 transition-all whitespace-nowrap">Agendar
+                Consulta</a>
+            <button id="mobile-menu-button" class="md:hidden w-10 h-10 flex items-center justify-center text-gray-700">
+                <i class="ri-menu-line ri-lg"></i>
+            </button>
+
+            <!-- Menu Mobile -->
+            <nav id="mobile-menu" class="hidden absolute top-full right-0 mt-4 bg-white shadow-md rounded-lg p-4 flex flex-col space-y-3 w-60 z-40">
+                <a href="#sobre" class="text-gray-700 hover:text-primary transition-colors">Sobre Mim</a>
+                <a href="#abordagem" class="text-gray-700 hover:text-primary transition-colors">Abordagem</a>
+                <a href="#trabalhos" class="text-gray-700 hover:text-primary transition-colors">Publicações</a>
+                <a href="#servicos" class="text-gray-700 hover:text-primary transition-colors">Serviços</a>
+                <a href="#especialidades" class="text-gray-700 hover:text-primary transition-colors">Especialidades</a>
+            </nav>
+        </div>
+    </header>
+
+    <script>
+        // Abrir/fechar menu mobile
+        document.addEventListener("DOMContentLoaded", function () {
+            const button = document.getElementById("mobile-menu-button");
+            const menu = document.getElementById("mobile-menu");
+
+            button.addEventListener("click", () => {
+                menu.classList.toggle("hidden");
+            });
+        });
+    </script>
+
 
 <body class="bg-white">
     <!-- Navegação -->
@@ -461,7 +408,6 @@
 </div>
 
     </section>
-
 
     <!-- Serviços Oferecidos -->
     <section id="servicos" class="py-20 bg-white">
